@@ -1,0 +1,60 @@
+body {
+	background-color: #D9FFED;
+}
+
+#content{
+	font-family: 'Montserrat', sans-serif;
+	width: 100%;
+	height: 100%;
+}
+
+#number{
+	margin: auto;
+	position: relative;
+	top: 200px;
+	font-size: 48px;
+	color: #254F8D;
+}
+
+.instruction{
+	margin: auto;
+	margin-left: 105px; 
+	width: 150px;
+	height: 40px;
+	background-color: #2EFC99;
+	color: #003013;
+	border-radius: 8px;
+	border-style: none;
+	font-size: 16px;
+	box-shadow: 0 5px 5px 0 grey;
+}
+
+.instruction:hover{
+	cursor: pointer;
+	color: white;
+}
+
+.instruction:first-child:hover{
+	background-color: #FF0101;
+}
+
+.instruction:nth-child(2):hover{
+	background-color: #453C3C;
+}
+
+.instruction:nth-child(3):hover{
+	background-color: #254F8D;	
+}
+
+
+#buttons{
+	position: relative;
+	left: 170px;
+	top: 200px;
+}
+
+
+
+p{
+	text-align: center;
+}
