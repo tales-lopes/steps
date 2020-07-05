@@ -1,0 +1,37 @@
+body {
+	background-color: #D9FFED;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#btn{
+	background-color: #2EFC99;
+	color: #003013;
+	border-style: none;
+	border-radius: 8px;
+	width: 150px;
+	height: 40px;
+	float: center;
+	transition: 0.3s;
+	font-weight: bold;
+}
+
+#btn:hover{
+	cursor: pointer;
+	color: #2EFC99;
+	background-color: #003013;
+}
+
+#btn:active{
+	outline: none;
+}
+
+#container{
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-row-gap: 200px;
+}
+
+.grid-item{
+	text-align: center;
+	padding: 20px;
+}
