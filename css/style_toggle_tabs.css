@@ -1,0 +1,77 @@
+body {
+	background-color: #D6D6D6;
+	font-family: 'Raleway', sans-serif;
+}
+
+.content{
+	display: flex;
+	flex-direction: column;
+}
+
+.menu{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	clear: right;
+	float: left;
+}
+
+.btn{
+	height: 50px;
+	width: 170px;
+	font-size: 18px;
+	font-weight: lighter;
+	background-color: #e5e5e5;
+	border: none;
+	float: right;
+}
+
+.btn:hover{
+	cursor: pointer;
+	background-color: #c5eceb !important;
+}
+
+#hist{
+	background-color: white;
+}
+
+.btn:focus{
+	outline: none;
+}
+
+.text{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.text p{
+	width: 500px;
+	justify-content: center;
+	text-align: justify;
+}
+
+.text h2{
+	justify-content: left;
+	text-align: left;
+}
+
+#historia{
+	display: flex;
+}
+
+#metas{
+	display: none;
+}
+
+#visao{
+	display: none;
+}
+
+.tcontent{
+	background-color: white;
+	padding: 5px;
+}

@@ -1,6 +1,6 @@
 const slide = document.querySelector(".slide");
 const images = document.querySelectorAll(".slide img");
-console.log(images.length)
+console.log(images.length);
 
 // Botões
 const ant = document.querySelector("#ant");

@@ -10,10 +10,9 @@ body {
 
 #number{
 	margin: auto;
-	position: relative;
-	top: 200px;
 	font-size: 48px;
 	color: #254F8D;
+	margin-top: 200px;
 }
 
 .instruction{
@@ -28,6 +27,7 @@ body {
 	font-size: 16px;
 	box-shadow: 0 5px 5px 0 grey;
 	transition: 0.2s;
+	float: center;
 }
 
 .instruction:hover{
@@ -49,12 +49,32 @@ body {
 
 
 #buttons{
-	position: relative;
-	left: 232px;
-	top: 200px;
+	margin-left: 17%;
 }
 
 p{
 	text-align: center;
 	font-weight: bold;
+}
+
+@media screen and (max-width: 950px){
+	body{
+		background-color: blue;
+	}
+	.instruction{
+		margin-left: 30px;
+	}
+}
+
+@media screen and (max-width: 690px){
+	body{
+		background-color: green;
+	}
+
+	.instruction{
+		float: left;
+		clear: both;
+		margin-top: 10px;
+		margin-left: 100px;
+	}
 }
