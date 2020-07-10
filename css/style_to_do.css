@@ -1,0 +1,107 @@
+body{
+	background-color: #e8e7e3;
+	font-family: 'Oxygen', sans-serif;
+}
+
+.content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+h2 {
+	font-size: 48px;
+	text-align: center;
+	font-weight: lighter;
+}
+
+.entrada{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.task{
+	border-radius: 0.2px;
+	border: none;
+	height: 30px;
+	width: 220px;
+	border: 1px solid black;
+	box-shadow: 0 3px 7px grey;
+	outline: none;
+}
+
+.btn_task{
+	margin-left: 20px;
+	border-radius: 8px;
+	outline: none;
+	height: 35px;
+	width: 80px;
+	border: none;
+	background-color: lightblue;
+}
+
+.btn_task:hover{
+	cursor: pointer;
+	background-color: #2fa3c8;
+}
+
+.tarefas{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
+}
+
+.clean{
+	margin-top: 15px;
+	display: flex;
+	flex-direction: row;	
+	align-self: center;
+	justify-content: center;		
+}
+
+.limpar {
+	border-radius: 8px;
+	outline: none;
+	border: none;
+	background-color: lightblue;
+	height: 35px;
+	width: 80px;
+}
+
+.limpar:hover{
+	cursor: pointer;
+	background-color: #2fa3c8;
+}
+
+.item{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: left;
+	background-color: white;
+	display: block;
+	width: 30%;
+	margin-top: 10px;
+	box-shadow: 0 5px 5px grey;
+	border-radius: 1px;
+	padding-left: 10px;
+}
+
+.item p{
+    float: left;
+}
+
+.material-icons {
+    margin-top: 15px;
+    margin-right: 10px;
+    float: right;
+    color: red; 
+}
+
+.material-icons:hover{
+    cursor: pointer;
+}
