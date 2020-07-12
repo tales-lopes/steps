@@ -27,7 +27,7 @@ h2 {
 	border-radius: 0.2px;
 	border: none;
 	height: 30px;
-	width: 220px;
+	width: 260px;
 	border: 1px solid black;
 	box-shadow: 0 3px 7px grey;
 	outline: none;
@@ -91,6 +91,10 @@ h2 {
 	padding-left: 10px;
 }
 
+.item:hover{
+    cursor: pointer;
+}
+
 .item p{
     float: left;
 }
@@ -104,4 +108,12 @@ h2 {
 
 .material-icons:hover{
     cursor: pointer;
+}
+
+.risco {
+    background-color: rgb(17, 247, 79);
+}
+
+.risco p {
+    text-decoration: line-through;
 }

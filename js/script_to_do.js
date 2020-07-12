@@ -4,12 +4,10 @@ var entrada = document.querySelector(".task");
 
 var tarefas = document.querySelector(".tarefas");
 var btn_excluir = document.querySelectorAll(".excluir");
+var item_risco = document.querySelectorAll(".item");
 
-console.log(btn_excluir);
-
-btn.addEventListener("click", () => {
-
-	//Retirar espaços desnecessários	
+function write_task () {
+    //Retirar espaços desnecessários	
 	entrada.value = entrada.value.trim();	
 
     //Se for vazio, retorna
@@ -41,21 +39,43 @@ btn.addEventListener("click", () => {
     item.appendChild(icon);
     //Adiciono o item à lista de tarefas
 	tarefas.appendChild(item);
-})
 
-btn_limpar.addEventListener("click", () => {
+    item.addEventListener('click', () => {
+        item.classList.toggle("risco");
+    })
+    
+    icon.addEventListener('click', () => {
+        tarefas.removeChild(item);
+    })
+}
 
-	console.log(tarefas.childNodes);
+function clear_tasks(){
+    console.log(tarefas.childNodes);
 	console.log(tarefas.childNodes.length);
 
 	for (var i = tarefas.childNodes.length - 1; i >= 0; i--) {
 		tarefas.removeChild(tarefas.childNodes[i]);
 	}
+}
+
+btn.addEventListener("click", () => {
+    write_task();
 })
 
-btn_excluir[1].addEventListener("click", () => {
-    teste = document.querySelectorAll(".excluir");
-    console.log(btn_excluir);
-    console.log(teste);
-    document.body.style.background = "red";
+btn_limpar.addEventListener("click", () => {
+    clear_tasks();
 })
+
+entrada.addEventListener("keyup", (event) => {
+    
+    if(event.keyCode === 13) {
+        write_task();
+    }
+})
+
+document.onkeyup = function(e) {
+    
+    if(e.altKey && e.which == 76){
+        clear_tasks();
+    }
+};
