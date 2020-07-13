@@ -1,6 +1,4 @@
 btn = document.querySelectorAll(".material-icons");
-console.log(btn);
-var i;
 
 for(i = 0; i < btn.length; i++){
     const pos = i;

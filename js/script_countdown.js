@@ -1,16 +1,26 @@
 clock = document.querySelectorAll(".time");
 input_data = document.querySelector(".calendar");
-console.log(input_data);
+btn = document.querySelector("#send");
 
 clock_output = new Array(4);
 
-wanted_time = new Date("Jul 12, 2021").getTime();
+function show_values() {
 
-setInterval (() => {
+    if(String(clock[0].classList.value).includes("disabled")){
+        for(var i = 0; i < clock.length; i++) {
+            clock[i].classList.remove("disabled");
+        }     
+    }    
+}
+
+btn.addEventListener("click", () => {    
+    wanted_time = new Date(input_data.value).getTime(); 
+    
+    setInterval (() => {
     current_time = new Date().getTime();
 
     difference = wanted_time - current_time;
-    
+            
     clock_output[0] = Math.floor(difference / (60 * 60 * 24 * 1000));
     clock_output[1] = Math.floor((difference % (60 * 60 * 24 * 1000)) / (60 * 60 * 1000));
     clock_output[2] = Math.floor((difference % (60 * 60 * 1000)) / (60 * 1000));
@@ -19,4 +29,8 @@ setInterval (() => {
     for(var i = 0; i < clock.length; i++){
         clock[i].childNodes[1].textContent = clock_output[i];
     }   
-}, 1000);
+    
+    if(clock_output[0] != undefined)
+        show_values();            
+}, 1000);    
+})
