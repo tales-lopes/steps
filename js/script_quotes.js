@@ -30,7 +30,7 @@ image_element = document.querySelector("img");
 
 btn_surprise = document.querySelector("#surprise button");
 
-btn_forward.addEventListener("click", () => {
+function next_quote () {
     if(inicio == imagens.length - 1){
         inicio = 0;
     }
@@ -41,9 +41,9 @@ btn_forward.addEventListener("click", () => {
     profession_element.textContent = profissao[inicio];
     bio_element.textContent = resumo[inicio];
     image_element.setAttribute("src", imagens[inicio]);
-})
+}
 
-btn_backward.addEventListener("click", () => {
+function prev_quote () {
     if(inicio == 0){
         inicio = imagens.length - 1;
     }
@@ -54,14 +54,40 @@ btn_backward.addEventListener("click", () => {
     profession_element.textContent = profissao[inicio];
     bio_element.textContent = resumo[inicio];
     image_element.setAttribute("src", imagens[inicio]);
-})
 
-btn_surprise.addEventListener("click", () => {
-    
+}
+
+function surprise_quote(){
     inicio = Math.floor(Math.random() * 5);
     
     name_element.textContent = names[inicio];
     profession_element.textContent = profissao[inicio];
     bio_element.textContent = resumo[inicio];
     image_element.setAttribute("src", imagens[inicio]);
+}
+
+btn_forward.addEventListener("click", () => {
+    next_quote();
 })
+
+btn_backward.addEventListener("click", () => {
+    prev_quote();
+})
+
+btn_surprise.addEventListener("click", () => {
+    surprise_quote();
+})
+
+document.onkeyup = function(e){
+    if(e.keyCode == 37){
+        prev_quote(); 
+    }
+    
+    if(e.keyCode == 39){
+        next_quote();
+    }
+    
+    if(e.keyCode == 83){
+        surprise_quote();
+    }
+}

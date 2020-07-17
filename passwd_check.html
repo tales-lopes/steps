@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Checker</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale = 1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href = "css/style_passwd.css">
+    <script src="https://kit.fontawesome.com/08ccd0193a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class = "container">
+        <div class = "container-password">
+            <div class = "welcome">Welcome</div>
+            <div class = "email">
+                Email <br>
+                <input type = "email" class = "user_input" placeholder="Digite seu email">
+            </div>
+            <div class = "password">
+                Password <br>
+                <input type = "password" class = "user_input" id = "password_in" placeholder="Digite sua senha">
+                
+                <i class="fas ver fa-eye"></i>
+            </div>
+            
+            <div id = "progresso">
+                <div id = "barra"> </div> 
+            </div>
+
+            <ul>
+                <li>Lowercase & Uppercase</li>
+                <li>Number (0-9)</li>
+                <li>Special characters (@#$%)</li>
+                <li>At least 8 characters</li>
+            </ul>
+            
+            <div class = "button">
+                <button>Create Account</button>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="js/script_passwd.js"></script>
+</body>
+</html>
